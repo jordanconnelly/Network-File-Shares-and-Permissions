@@ -51,3 +51,12 @@ For the Write-Access folder we will set the Permission Level to "Read/Write"
 Finally, for the No-Access folder we will set the Permission Level to "Read/Write" for the Domain Admins group. This will allow the Admins to access this folder while keeping the Domain Users out of it.
 <p>
 <img src="https://imgur.com/Cm6sSXs.png">
+
+<p></p>
+<h2>Accessing Files as a Normal User</h2>
+<p></p>
+Log in to Client-1 as one of the Domain Users created in the Active Directory from before, I chose the user (mat.don).
+<p>
+Once logged into Client-1 (mat.don) we will navigate to the root of DC-1 where the Shared Files are located (Right-click Start>Run>\\DC-1)
+<p>
+<img src="https://imgur.com/laIe17a.png">
