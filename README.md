@@ -5,7 +5,7 @@
 <h1>Active Directory Network File Sharing and Permissions</h1>
 This tutorial briefly details how to assign specific file permissions to network folders.
 <p>
-File Shares is the ability to share files or directories over a network, allowing multiple users or groups to access them with varying degrees of abilities (read-only, read & write, no access).
+File Shares refers to the ability to share files or directories over a network, allowing multiple users or groups to access them with varying degrees of abilities (read-only, read & write, no access).
 <br />
 
 
@@ -29,13 +29,17 @@ File Shares is the ability to share files or directories over a network, allowin
 - Confirming group permissions
 
 
-<h2>Deployment and Configuration Steps</h2>
-
-<p>
-<img src=".png" height="80%" width="80%">
+<h2>Creating Sample File Shares with Various Permissions</h2>
 </p>
 <p>
-For this exercise we will continue to use the Domain Controller (DC-1) and VM (Client-1) we created in the Active Directory Repository (https://github.com/jordanconnelly/configure-ad).
+For this exercise, we will continue to use the Domain Controller (DC-1) and Domain Users (Client-1) VM's we created in the Active Directory Repository (https://github.com/jordanconnelly/configure-ad).
 <p>
-First log in to DC-1 using the domain admin account (mydomain.com\jordan_admin). Open File Explorer and navigate to the (C:) drive. 
-<br />
+First log in to DC-1 using the domain admin account (mydomain.com\jordan_admin). Open File Explorer and navigate to the (C:) drive. We will create four new folders: “Read-Access”, “Write-Access”, “No-Access”, and “Accounting”.
+<p>
+<img src="https://imgur.com/HlxpLKw.png">
+<p></p>
+We can now set Permissions on these folders for the Domain Users. Right-click on the folder and choose Properties>Sharing tab>Share...>type in Domain Users>Add>Select Permission Level>Share
+<p>
+For the Read-Access folder we will set the Permission Level to "Read"
+<p>
+<img src="https://imgur.com/oQURdoq.png">
