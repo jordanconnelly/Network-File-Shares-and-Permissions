@@ -43,3 +43,11 @@ We can now set Permissions on these folders for the Domain Users. Right-click on
 For the Read-Access folder we will set the Permission Level to "Read"
 <p>
 <img src="https://imgur.com/oQURdoq.png">
+<p></p>
+For the Write-Access folder we will set the Permission Level to "Read/Write"
+<p>
+<img src="https://imgur.com/4s0jQVq.png">
+<p></p>
+Finally, for the No-Access folder we will set the Permission Level to "Read/Write" for the Domain Admins group. This will allow the Admins to access this folder while keeping the Domain Users out of it.
+<p>
+<img src="https://imgur.com/Cm6sSXs.png">
