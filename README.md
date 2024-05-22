@@ -67,8 +67,8 @@ Open the "Read-Access" folder and attempt to create a new file (Right-click in f
 <p></p>
 Next, open the "Write-Access" folder and attempt to create a new file. We see that because the Domain Users permissions include both Read/Write for this folder, we can add a new folder to it.
 <p>
-<img src="https://imgur.com/iB0XjAq">
+<img src="https://imgur.com/iB0XjAq.png">
 <p></p>
-Finally we will open the "No-Access" folder and attempt to create a new file. We will not be able to open this folder because the Permissions only pertain to Domain Admins.
+Finally we will open the "No-Access" folder and attempt to create a new file. We will not be able to even open this folder because the Permissions only allow Domain Admins access to it.
 <p>
-<img src"https://imgur.com/KW05Txv">
+<img src="https://imgur.com/KW05Txv.png">
