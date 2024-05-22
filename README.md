@@ -60,3 +60,15 @@ Log in to Client-1 as one of the Domain Users created in the Active Directory fr
 Once logged into Client-1 (mat.don) we will navigate to the root of DC-1 where the Shared Files are located (Right-click Start>Run>\\DC-1)
 <p>
 <img src="https://imgur.com/laIe17a.png">
+<p></p>
+Open the "Read-Access" folder and attempt to create a new file (Right-click in folder>New>Folder). We will receive an error message because while we do have permission to open the "Read-Access" folder, we do not have permission to edit it.
+<p>
+<img src="https://imgur.com/PCWIg4S.png">
+<p></p>
+Next, open the "Write-Access" folder and attempt to create a new file. We see that because the Domain Users permissions include both Read/Write for this folder, we can add a new folder to it.
+<p>
+<img src="https://imgur.com/iB0XjAq">
+<p></p>
+Finally we will open the "No-Access" folder and attempt to create a new file. We will not be able to open this folder because the Permissions only pertain to Domain Admins.
+<p>
+<img src"https://imgur.com/KW05Txv">
