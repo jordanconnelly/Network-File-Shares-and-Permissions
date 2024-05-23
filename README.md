@@ -94,3 +94,7 @@ Sign out of Client-1 and reopen DC-1. In Active Directory, open the "Accountants
 <p>
 <img src="https://imgur.com/vqnCfvm.png">
 <img src="https://imgur.com/BTxhhLa.png">
+<p></p>
+Sign back into Client-1 as the Domain User we just added to the Accountants Security Group (mat.don). Reopen the Shared Files folder (Right-click Start>Run>\\DC-1) and attempt to access the "Accounting" folder again. We will now observe that we can both access this folder and create new files inside of it because this user now has Read/Write access. 
+<p>
+<img src="https://imgur.com/VYQVacv.png">
