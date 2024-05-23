@@ -51,6 +51,8 @@ For the Write-Access folder we will set the Permission Level to "Read/Write"
 Finally, for the No-Access folder we will set the Permission Level to "Read/Write" for the Domain Admins group. This will allow the Admins to access this folder while keeping the Domain Users out of it.
 <p>
 <img src="https://imgur.com/Cm6sSXs.png">
+<p>
+We will come back to the Accounting folder later on.
 
 <p></p>
 <h2>Accessing Files as a Normal User</h2>
@@ -72,3 +74,23 @@ Next, open the "Write-Access" folder and attempt to create a new file. We see th
 Finally we will open the "No-Access" folder and attempt to create a new file. We will not be able to even open this folder because the Permissions only allow Domain Admins access to it.
 <p>
 <img src="https://imgur.com/KW05Txv.png">
+  
+<p></p>
+<h2>Creating a Security Group, Assigning Permissions, and Testing Access</h2>
+<p>
+In this section, we will create a Security Group and give that group Read/Write permissions to the "Accounting" folder created earlier. Go back to DC-1 and open Active Directory Users and Computers. Right-click on "mydomain.com" and select New>Organizational Unit, name this Security_Groups. Right-click on "Security_Groups" and select New>Group. In the pop-up window name the group "Accountants". 
+<p>
+<img src="https://imgur.com/djj4YSq.png">
+<p></p>
+Next, we will open File Explorer to the (C:) drive, right-click on "Accounting" and select Properties>Sharing tab>"Share...". Type in "Accountants" and set the Permission Level to "Read/Write"
+<p>
+<img src="https://imgur.com/91wz77l.png">
+<p></p>
+Minimize DC-1 and open Client-1 again. Attempt to open the "Accounting" folder. Since the normal Domain User (mat.don) is not currently part of the "Accountants" Security Group created in Active Directory, access to this folder is denied.
+<p>
+<img src="https://imgur.com/fdOg3co.png">
+<p></p>
+Sign out of Client-1 and reopen DC-1. In Active Directory, open the "Accountants" group. In the pop-up window select the "Members" tab and click "Add...". Type in a Domain User (mat.don) and select OK>Apply>OK to save these changes. Now Domain User (mat.don) is in the Accountants Security Group.
+<p>
+<img src="https://imgur.com/vqnCfvm.png">
+<img src="https://imgur.com/BTxhhLa.png">
