@@ -65,13 +65,19 @@ Once logged into Client-1 (mat.don) we will navigate to the root of DC-1 where t
 <p></p>
 Open the "Read-Access" folder and attempt to create a new file (Right-click in folder>New>Folder). We will receive an error message because while we do have permission to open the "Read-Access" folder, we do not have permission to edit it.
 <p>
+This type of file permission could be used for employees to access company documents such as company policies or training documents.
+<p>
 <img src="https://imgur.com/PCWIg4S.png">
 <p></p>
 Next, open the "Write-Access" folder and attempt to create a new file. We see that because the Domain Users permissions include both Read/Write for this folder, we can add a new folder to it.
 <p>
+This type of file permission could be used if team members are working on a collaborative project, allowing employees to upload their own documents/findings so others can view/edit them.
+<p>
 <img src="https://imgur.com/iB0XjAq.png">
 <p></p>
-Finally we will open the "No-Access" folder and attempt to create a new file. We will not be able to even open this folder because the Permissions only allow Domain Admins access to it.
+Finally, we will open the "No-Access" folder and attempt to create a new file. We will not be able to even open this folder because the Permissions only allow Domain Admins access to it.
+<p>
+This type of file permission could be used for managers to keep records of employee information or performance reports. This information can be useful for managers but could be detrimental to the business if normal employees access it.
 <p>
 <img src="https://imgur.com/KW05Txv.png">
   
@@ -96,5 +102,7 @@ Sign out of Client-1 and reopen DC-1. In Active Directory, open the "Accountants
 <img src="https://imgur.com/BTxhhLa.png">
 <p></p>
 Sign back into Client-1 as the Domain User we just added to the Accountants Security Group (mat.don). Reopen the Shared Files folder (Right-click Start>Run>\\DC-1) and attempt to access the "Accounting" folder again. We will now observe that we can both access this folder and create new files inside of it because this user now has Read/Write access. 
+<p>
+This type of file could contain sensitive documents concerning finances relating to current or upcoming business dealings, if normal employees had access to this it could create security concerns and potentially negatively impact those business dealings. The accountants who do have access to this information could be legally bound by NDA's so the likelihood of anything nefarious happening to this information is reduced to almost zero.
 <p>
 <img src="https://imgur.com/VYQVacv.png">
